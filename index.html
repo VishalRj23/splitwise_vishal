@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>SplitWise Application</title>
-  <link rel="stylesheet" href="style (2).css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SplitWise App</title>
 </head>
 <body>
-  <h1>SplitWise Application</h1>
-  
-  <button onclick="generateGraph()">Generate Random Transaction</button>
-  <button onclick="minCashFlow()">Optimize Settlement</button>
+    <h1>SplitWise Lite</h1>
+    <!--add people--> 
+    <div class="section">
+        <h2>Add People to Group</h2>
+        <input type="text" id="personName" placeholder="Enter name" />
+        <button onclick="addPerson()">Add Person</button>
+        <ul id="peoplelist"></ul>
+    </div>
 
-  <div id="originalGraph" style="height: 300px;"></div>
-  <h2>Settlement Plan:</h2>
-  <div id="result"></div>
-  <div id="settlementGraph" style="height: 300px;"></div>
+    <!--Expense-->
+    <div class="section">
+        <h2>Add Expense</h2>
+        <input type="number" id="amount" placeholder="Amount" />
+        <br>
+        <input type="text" id="description" placeholder="Description(e.g., Lunch)"/>
+        <br>
+        <label for="paidBy">Paid By:</label>
+        <select  id="paidBy">
+            <!--JS -->
+        </select>
+        <br>
+        <label for="">Split With:</label>
+        <div id="splitwithlist"></div>
 
-  <script src="heap (1).js"></script>
-  <script src="script (1).js"></script>
+        <button onclick="addExpense()">Add Expense</button>
+    </div>
+
+
+    <!--Balance--> 
+    <div class="section">
+        <h2>Balances</h2>
+        <ul id="balanceslist"></ul>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
