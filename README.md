@@ -25,5 +25,4 @@ A web-based application that simplifies group expense sharing and financial sett
 
 ---
 
-## 📂 Folder Structure (Example)
 
